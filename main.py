@@ -36,6 +36,7 @@ ball = Ball()
 
 
 def is_collided_with(a, b):
+    """Check if ball collised with paddle."""
     return abs(a.xcor() - b.xcor()) < 50 and abs(a.ycor() - b.ycor()) < 50
 
 

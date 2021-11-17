@@ -2,6 +2,8 @@ from turtle import Turtle
 
 
 class Scoreboard(Turtle):
+    """Create a scoreboard"""
+
     def __init__(self) -> None:
         super().__init__()
         self.color("White")
@@ -12,6 +14,7 @@ class Scoreboard(Turtle):
         self.update_score()
 
     def update_score(self) -> None:
+        """Display scoreboard"""
         self.clear()
         self.goto(-100, 200)
         self.write(
@@ -23,9 +26,11 @@ class Scoreboard(Turtle):
         )
 
     def l_point(self) -> None:
+        """Add point to left player"""
         self.l_score += 1
         self.update_score()
 
     def r_point(self) -> None:
+        """Add point to right player"""
         self.r_score += 1
         self.update_score()
